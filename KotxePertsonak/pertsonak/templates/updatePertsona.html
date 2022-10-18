@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Editatu pertsona</h1>
+    <form action="updatePertsona/{{ pertsona.id }}" method="post">
+    {% csrf_token %}
+    Izena:<br>
+    <input name="izena" value="{{ pertsona.izena }}">
+    <br><br>
+    Abizena:<br>
+    <input name="abizena" value="{{ pertsona.abizena }}">
+    <br><br>
+    Herria:<br>
+    <input name="herria" value="{{ pertsona.herria }}">
+    <br><br>
+    <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

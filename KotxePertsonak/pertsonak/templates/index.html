@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Pertsonak</h1>
+
+    <table border="1">
+        {% for x in pertsonak %}
+        <tr>
+        <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+        <td>{{ x.izena }}</td>
+        <td>{{ x.abizena }}</td>
+        <td>{{ x.herria }}</td>
+        <td><a href="delete/{{ x.id }}">Borratu</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>
+    <a href="addPertsona/">Pertsona bat sortu</a>
+    </p>
+</body>
+</html>

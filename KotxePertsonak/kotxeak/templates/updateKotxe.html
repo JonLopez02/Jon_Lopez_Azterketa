@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+  <h1>Editatu kotxea</h1>
+  <form action="updateKotxe/{{ kotxe.id }}" method="post">
+    {% csrf_token %}
+    Izena:<br>
+    <input name="izena" value="{{ kotxe.izena }}">
+    <br><br>
+    Alokatze data:<br>
+    <input name="alokatze_data" value="{{ kotxe.alokatze_data }}">
+    <br><br>
+    Kolorea:<br>
+    <input name="kolorea" value="{{ kotxe.kolorea }}">
+    <br><br>
+    Modeloa:<br>
+    <input name="modeloa" value="{{ kotxe.modeloa }}">
+    <br><br>
+    Prezioa:<br>
+    <input name="prezioa" value="{{ kotxe.prezioa }}">
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
